@@ -53,7 +53,7 @@ def create():
     
     return render_template('create.html')
 
-@app.route('/<int:id>/edit', methods=('GET', 'POST'))
+@app.route("/<int:id>/edit", methods=('GET', 'POST'))
 def edit(id):
     post = get_post(id)
 
@@ -74,7 +74,7 @@ def edit(id):
 
     return render_template('edit.html', post=post)
 
-@app.route('/<int:id>/delete', methods=('POST',))
+@app.route("/<int:id>/delete", methods=('POST',))
 def delete(id):
     post = get_post(id)
     conn = get_db_connection()

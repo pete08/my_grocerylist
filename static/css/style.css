@@ -4,3 +4,22 @@ h1 {
     text-align: center;
     padding: 10px;
 }
+
+.form-submit-button {
+	background: #0066A2;
+	color: white;
+	border-style: outset;
+	border-color: #0066A2;
+	height: 50px;
+	width: 100px;
+	font: bold15px arial,sans-serif;
+	text-shadow: none;
+}
+
+button, input[type="button"], input[type="submit"] { 
+    color:#490; 
+    font: bold 95% 'trebuchet ms',helvetica,sans-serif; 
+    background-color:#fed; 
+    border:1px solid; 
+    border-color: #696 #363 #363 #696; 
+} 

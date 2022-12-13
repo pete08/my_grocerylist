@@ -1,19 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to My Site {% endblock %}</h1>
+    <h1>{% block title %} Add to the Grocery List  {% endblock %}</h1>
+    <table>
     {% for post in posts %}
-        <a href="{{ url_for('post', post_id=post['id']) }}">
-            <h2>{{ post['title'] }}</h2>
-            <h2>{{ post['id'] }}</h2>
-        </a>
-        <span class="badge badge-primary">{{ post['created'] }}</span>
-        <a href="{{ url_for('edit', id=post['id'])}}">
-            <span class="badge badge-warning">Edit</span>
-        </a>
-        <a href="{{ url_for('delete', id=post['id'])}}">
-            <span class="badge badge-warning">Delete</span>
-        </a>
-        <hr>
+        <tr>
+        <td><a href="{{ url_for('post', post_id=post['id']) }}">
+                <h5>{{ post['title'] }}</h5>
+            </a>
+        </td>
+        <td>
+            <h20>
+                <span class="badge badge-light">{{ post['created'][:post['created'].rfind(":")] }}
+                </span>
+            </h20>
+        </td>
+        <td>
+            <h20>
+            <a href="{{ url_for('edit', id=post['id'])}}">
+                <span class="badge badge-warning">Edit
+                </span>
+            </a>
+            </h20>
+        <td>
+        <!-- <hr> -->
     {% endfor %}
+    </table>
 {% endblock %}
